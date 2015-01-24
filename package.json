@@ -1,0 +1,16 @@
+{
+	"name":"RamziesPortfolio",
+	"main":"server.js",
+	"dependencies":
+	{
+		"express":"~4.0.0",
+		"morgan":"~1.0.0",
+		"body-parser":"~1.0.0",
+		"metod-override":"~1.0.0"
+	},
+	"version":"0.0.0",
+	"engines":
+	{
+		"node":"0.10.x"
+	}
+}
