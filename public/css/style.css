@@ -16,3 +16,8 @@ div{
 	text-align: center;
 
 }
+.foo{
+	width: 155px;
+	height: 155px;
+	background-image: url(http://media.blizzard.com/wow/renders/npcs/grid/creature47841.jpg);
+}
