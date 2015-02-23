@@ -3,7 +3,8 @@
 	"version":"1.4.0",
 	"dependencies":{
 		"angular":"latest",
-		"angular-route":"latest"
+		"angular-route":"latest",
+		"ng-lodash":"latest"
 	}	
 
 }

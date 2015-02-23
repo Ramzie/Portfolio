@@ -1,1 +1,1 @@
-angular.module('portfolio',['ngRoute','appRoutes','gallery','twitter','resume','404','appDirectives']);
+angular.module('portfolio',['ngRoute','appRoutes','gallery','resume','404','appDirectives', 'appServices', 'ngLodash']);

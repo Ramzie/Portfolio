@@ -1,6 +1,8 @@
 /* Styles go here */
 .menubar{
-
+	position: absolute ;
+  left: 0px;
+  width: 200px;
 	background-color: grey;
 
 }
@@ -8,6 +10,7 @@
 .mainwindow{
 
 	background-color: blue;
+	color:white;
 
 }
 
@@ -23,8 +26,19 @@ div{
 	
 }
 
-.thumb{
-	width: 200px;
-    height: 150px;
-    overflow: hidden;
+.temp{
+	background-color: blue;
+}
+
+img {
+				float:right;
+        width : 80px;
+        height : 80px;
+        margin:0 auto;
+        display:inline-block;
+}
+
+.embiggen{
+	width: 800px;
+	height: 800px;
 }

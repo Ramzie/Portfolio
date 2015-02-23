@@ -1,55 +1,45 @@
 //directives module
 angular.module('appDirectives', [])
-	.directive('galleryDirective', function(){
+	.directive('galleryDirective', function(flickrService, lodash){
 		return{
+			scope: {
+				flickrImg: '='
+			},
 			restrict: 'A',
 			link: function(scope){
-				scope.pictures =[ {'id':'1','imageUrl':'pictures/1.jpg'},
+				flickrService.get()
+				.success(function(data) {
+    			// this callback will be called asynchronously
+    			// when the response is available
+    			//console.log(data);
+    			var goodJson = JSON.parse(data.slice(14, data.length-1));
+    			//console.log(goodJson.photos.photo);	
+    			scope.pictures = lodash.reduce(goodJson.photos.photo, function(arrayImgs, img, id){
+                    var imgLink = 'https://farm' + img.farm + '.static.flickr.com/' + img.server + '/' + img.id + '_' + img.secret + '_n.jpg';
+    				var imgObj = {'id':id,'imageUrl':imgLink};
+                    arrayImgs[id]=imgObj;
+                    return arrayImgs;
+    			}, []);
+  			})
+
+				/*scope.pictures =[ {'id':'1','imageUrl':'pictures/1.jpg'},
 												{'id':'2','imageUrl':'pictures/2.jpg'},
 												{'id':'3','imageUrl':'pictures/3.jpg'},
 												{'id':'4','imageUrl':'pictures/4.jpg'},
 												{'id':'5','imageUrl':'pictures/5.jpg'}
-											];
+											];*/
 			},
 			template: function(){
 				
 				return [
-				'<div ng-repeat="picture in pictures" ng-click="foo = picture.imageUrl">',
-					'<img class="thumb" src="{{picture.imageUrl}}">',
+				'<div ng-repeat="picture in pictures" ng-click="$parent.selected=$index">',
+				'<img src="{{picture.imageUrl}}" ng-class="{embiggen: selected == $index}">',
 				'</div>'
 				].join("")
 			}
-
 		}
 	});
 
-
-
-
-
-
-
-
-	/*return{
-					<div ng-repeat='picture in pictures'>
-						<img ng-class"thumbnail" src"{{/pictures/picture.id}}">
-					</div>
-				}*/
-				/*link: function(scope, element, attrs){
-				console.log('scope',scope);
-				console.log('element',element[0]);
-				console.log('element',element);
-				console.log('pcontent',element[0].children[0].textContent);
-				console.log('attrs', attrs);
-				//element[0].children[0].textContent='vegas is a turkey';
-				//console.log('galleryDirective',attrs.galleryDirective);
-				//console.log('galleryDirective type', typeof attrs.galleryDirective );
-				//console.log('galleryDirective JSON',JSON.parse(attrs.galleryDirective).type );
-				}*/
-
-
-
-						/*restrict: 'A',
-		//template: function(){
-				var pictures = [
-								]*/
+	/*'<div ng-repeat="picture in pictures" ng-click="foo = !foo">',
+				'<img src="{{picture.imageUrl}}" ng-class="{embiggen: foo}">',
+				'</div>'*/
