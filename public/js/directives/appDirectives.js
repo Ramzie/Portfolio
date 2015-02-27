@@ -15,7 +15,7 @@ angular.module('appDirectives', [])
     			var goodJson = JSON.parse(data.slice(14, data.length-1));
     			//console.log(goodJson.photos.photo);	
     			scope.pictures = lodash.reduce(goodJson.photos.photo, function(arrayImgs, img, id){
-                    var imgLink = 'https://farm' + img.farm + '.static.flickr.com/' + img.server + '/' + img.id + '_' + img.secret + '_n.jpg';
+                    var imgLink = 'https://farm' + img.farm + '.static.flickr.com/' + img.server + '/' + img.id + '_' + img.secret + '_z.jpg';
     				var imgObj = {'id':id,'imageUrl':imgLink};
                     arrayImgs[id]=imgObj;
                     return arrayImgs;

@@ -3,3 +3,5 @@ public/libs/
 .DS_Store
 *.swp
 app/apikey.js
+public/pictures/hive.jpeg
+

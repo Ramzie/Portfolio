@@ -1,33 +1,90 @@
 /* Styles go here */
-.menubar{
+/*.menubar{
 	position: absolute ;
   left: 0px;
   width: 200px;
 	background-color: grey;
 
+}*/
+/* Header */
+header{
+	position: relative;
+	height: 700px;
+	width: 100%;
+	background: url("/pictures/hive.jpeg") no-repeat top center;
+	background-size: cover;
+	overflow: hidden;
+}
+
+a, a:visited{
+	text-decoration: none;
+	outline: 0;
+	color: #11ABB0;
+}
+ul{
+	list-style: none;
+}
+
+/* Navigation bar */
+.navbar{
+	font: 12px 'monserrat';
+	width: 100%;
+	margin: 0 auto;
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: green;
+	text-align: right;
+}
+.navbar ul {
+	background-color: red;
+	width: 10%;
+	float : right;
+}
+.navbar li {
+	display: inline-block;
+	list-style: none;
+	background-color: yellow;
+	float: left;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .mainwindow{
-
+	width: 25%;
+	position: relative;
 	background-color: blue;
 	color:white;
+	top: 25%;
+	left: 40%;
+	text-align: center;
 
 }
 
+.social {
+	font-family: "Montserrat-Regular";
+	margin: 24px 0;
+	padding: 0;
+	font-size: 30px;
+	text-shadow: 0px 1px rgba(0, 0, 0, .8);
+	/*display: inline-block;
+	background-color: green;
+	width: 10%;*/
+}
+
+.social li{
+	display: inline-block;
+	margin: 0 15px;
+	padding: 0;
+}
+
+.social li a { color: #fff;}
+.social li a:hover { color: #11ABB0;}
 div{
 
 	text-align: center;
 
-}
-.foo{
-	width: 155px;
-	height: 155px;
-	background-image: url(http://media.blizzard.com/wow/renders/npcs/grid/creature47841.jpg);
-	
-}
-
-.temp{
-	background-color: blue;
 }
 
 img {

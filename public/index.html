@@ -14,20 +14,23 @@
 	  <script src="/js/directives/appDirectives.js"></script>
     <script src="/js/services/appServices.js"></script>
 	  <title>Ramzie's Portfolio</title>
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
   </head>
 
   <body>
-	<div class="menubar"> 
-      <ul>
-      	<li><a href="/">resume</a></li>
-      	<li><a href="/gallery">gallery</a></li>
-      </ul>	
-    </div>
-	<div ng-app='portfolio' class="mainwindow">
-      <div ng-view>
-      	
+	  <header>
+      <div class="navbar"> 
+        <ul >
+      	 <li><a href="/">resume</a></li>
+      	 <li><a href="/gallery">gallery</a></li>
+        </ul>	
       </div>
-    </div>
+	    <div ng-app='portfolio' class="mainwindow">
+        <div ng-view>
+      	
+        </div>
+      </div>
+    </header>
   </body>
 
 </html>
