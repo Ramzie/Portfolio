@@ -1,6 +1,6 @@
 {
-	"name": "RamziesPortfolio",
-	"subdomain": "ramziesportfolio",
+	"name": "Tom Rasmussen Portfolio",
+	"subdomain": "tomrasmussen",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js"
