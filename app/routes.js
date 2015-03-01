@@ -1,5 +1,6 @@
+//injecting flickr API key to keep it private
 var apiKey = require('./apikey');
-var http = require('http');
+//used requestify to serve flickr API data
 var requestify = require('requestify');
 module.exports = function(app){
 	app.get('/api/flickr_data', function(req, res){

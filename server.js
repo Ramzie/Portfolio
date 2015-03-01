@@ -1,3 +1,4 @@
+//your basic Node.js server
 var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
@@ -13,4 +14,3 @@ app.use( methodOverride());
 
 require('./app/routes')(app);
 app.listen(port);
-console.log("everything worked");
