@@ -7,6 +7,8 @@ angular.module('appDirectives', [])
 			},
 			restrict: 'A',
 			link: function(scope){
+				console.log('scope',scope);
+				scope.selected = 4;
 				flickrService.get()
 				.success(function(data) {
     			// this callback will be called asynchronously
@@ -32,7 +34,7 @@ angular.module('appDirectives', [])
 			template: function(){
 				
 				return [
-				'<div ng-repeat="picture in pictures" ng-click="$parent.selected=$index">',
+				'<div  ng-repeat="picture in pictures" ng-click="$parent.selected=$index">',
 				'<img src="{{picture.imageUrl}}" ng-class="{embiggen: selected == $index}">',
 				'</div>'
 				].join("")
