@@ -1,8 +1,8 @@
 angular.module('appRoutes',[]).config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
   $routeProvider
     .when('/',{
-      templateUrl:'views/resume.html',
-      controller:'resumeController'
+      templateUrl:'views/home.html',
+      controller:'homeController'
     })
     .when('/gallery',{
       templateUrl:'views/gallery.html',
